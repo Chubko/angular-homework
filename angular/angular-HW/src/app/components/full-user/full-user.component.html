@@ -1,13 +1,21 @@
 <div *ngIf="user">
-  {{user.id}}
-  {{user.name}}
-  {{user.username}}
-  {{user.email}}
-  {{user.address.city}}
-  {{user.address.street}}
-  {{user.address.geo.lat}}
-  {{user.address.geo.lng}}
-<a [routerLink]="['posts', user.id]">posts</a>
-<!--  <button (click)="goTo()">show posts</button>-->
+  <h2>Details</h2>
+  User id: {{user.id}}
+  <br>
+  Name: {{user.name}}
+  <br>
+  Username: {{user.username}}
+  <br>
+  Email{{user.email}}
+  <br>
+  Address: city: {{user.address.city}},
+  street: {{user.address.street}},
+  geo: lat: {{user.address.geo.lat}},
+  lng: {{user.address.geo.lng}}.
+  <br>
+<!--<a [routerLink]="['posts', user.id]">posts</a>-->
+  <button (click)="goTo()">show posts</button>
+  <hr>
 </div>
 <router-outlet></router-outlet>
+
