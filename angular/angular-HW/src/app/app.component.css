@@ -1,0 +1,14 @@
+ul {
+  background: silver;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
