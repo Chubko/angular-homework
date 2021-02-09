@@ -8,6 +8,32 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+<!--  <app-root></app-root>-->
+<script>
+  class RadioStation{
+    users = [];
+
+    subscribe(user){
+      this.users.push(user);
+      return this;
+    }
+    notify(song){
+      for (const user of this.users){
+        console.log(`${user.name}, playing song is ${song}`)
+      }
+    }
+
+  }
+
+  let radioStation = new RadioStation();
+  radioStation
+    .subscribe({name:'vasya'})
+    .subscribe({name: 'vanya'})
+
+  radioStation.notify('la-la-la');
+
+  radioStation.subscribe({name: 'kokos'});
+  radioStation.notify('na-na-na');
+</script>
 </body>
 </html>
